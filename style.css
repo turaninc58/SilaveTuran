@@ -113,3 +113,32 @@ button {
     margin: 10px;
     border-radius: 10px;
 }
+
+.note-section {
+  margin-top: 40px;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff0f5; /* açık pembe arka plan */
+  border-top: 2px dashed #f08080; /* üst çizgiyle ayırma efekti */
+}
+
+.note-section h3 {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 20px;
+  color: #d6336c;
+  margin-bottom: 10px;
+}
+
+.note-box {
+  width: 80%;
+  height: 150px;
+  padding: 15px;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  border: 2px solid #f5a5c0;
+  border-radius: 10px;
+  background-color: #ffe6f0;
+  resize: vertical;
+  color: #333;
+}
+
