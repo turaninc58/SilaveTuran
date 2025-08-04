@@ -82,31 +82,32 @@ button {
 }
 
 .photo-item {
-  width: 100%;
-  aspect-ratio: 4 / 5; /* Tüm fotoğraflar aynı orana sahip olur */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background-color: #fff; /* arka plan */
+  padding-bottom: 10px;
 }
 
 .photo-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Taşanları kırpar, hizalar */
-  display: block;
-  transition: transform 0.3s ease;
+  height: auto;
+  flex-grow: 1;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
 }
-
-.photo-item img:hover {
-  transform: scale(1.05);
-}
-
 
 .photo-note {
   font-size: 14px;
   font-style: italic;
-  color: #1a1a1a;
-  margin-top: 6px;
+  color: #555;
+  text-align: center;
+  padding: 8px;
+  margin: 0;
 }
 
 
