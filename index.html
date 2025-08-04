@@ -1,71 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sıla ve Turan</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silâ & Turan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body onload="kontrolEt()">
+<body>
 
-  <!-- Arka planda müzik -->
-  <audio autoplay loop>
-    <source src="music/sarki.mp3" type="audio/mpeg" />
-  </audio>
-
-  <!-- Kapı ve Şifre Giriş Paneli -->
-  <div id="kapilar">
-    <div class="kapi sol"></div>
-    <div class="kapi sag"></div>
-    <div id="sifrePaneli">
-      <h2>🌸 Lütfen şifreyi gir:</h2>
-      <input type="password" id="sifre" placeholder="••••••">
-      <button onclick="sifreKontrol()">Giriş</button>
+<div id="gate-screen">
+    <div class="gate left-gate"></div>
+    <div class="gate right-gate"></div>
+    <div id="password-container">
+        <input type="password" id="password" placeholder="Şifreyi girin">
+        <button onclick="checkPassword()">Giriş</button>
     </div>
-  </div>
+</div>
 
-  <!-- Ana içerik -->
-  <div id="icerik" style="display:none;">
-    <h1>💖 Sıla ve Turan'ın Anıları 💖</h1>
-    <p>"Birlikte geçirdiğimiz her an bir ömre bedel..."</p>
+<div id="main-content" style="display:none;">
+    <div class="music-box">
+        <audio controls autoplay loop>
+            <source src="music/sarki.mp3" type="audio/mp3">
+            Tarayıcınız ses etiketini desteklemiyor.
+        </audio>
+        <div class="music-text">"Bu şarkı bize özel..."</div>
+    </div>
 
-    <!-- Fotoğraf Galerisi -->
-    <section>
-      <h2>📸 Fotoğraflarımız</h2>
-      <div class="galeri">
-        <!-- 15 adet örnek foto -->
-        <img src="images/foto1.jpg" alt="Anı 1" />
-<img src="images/foto2.jpg" alt="Anı 2" />
-<img src="images/foto3.jpg" alt="Anı 3" />
-<img src="images/foto4.jpg" alt="Anı 4" />
-<img src="images/foto5.jpg" alt="Anı 5" />
-<img src="images/foto6.jpg" alt="Anı 6" />
-<img src="images/foto7.jpg" alt="Anı 7" />
-<img src="images/foto8.jpg" alt="Anı 8" />
-<img src="images/foto9.jpg" alt="Anı 9" />
-<img src="images/foto10.jpg" alt="Anı 10" />
-<img src="images/foto11.jpg" alt="Anı 11" />
-<img src="images/foto12.jpg" alt="Anı 12" />
-<img src="images/foto13.jpg" alt="Anı 13" />
-<img src="images/foto14.jpg" alt="Anı 14" />
-<img src="images/foto15.jpg" alt="Anı 15" />
-      </div>
-    </section>
+    <h2>Fotoğraflarımız</h2>
+    <div class="gallery">
+<img src="images/foto1.jpg" alt="Foto 1">
+<img src="images/foto2.jpg" alt="Foto 2">
+<img src="images/foto3.jpg" alt="Foto 3">
+<img src="images/foto4.jpg" alt="Foto 4">
+<img src="images/foto5.jpg" alt="Foto 5">
+<img src="images/foto6.jpg" alt="Foto 6">
+<img src="images/foto7.jpg" alt="Foto 7">
+<img src="images/foto8.jpg" alt="Foto 8">
+<img src="images/foto9.jpg" alt="Foto 9">
+<img src="images/foto10.jpg" alt="Foto 10">
+<img src="images/foto11.jpg" alt="Foto 11">
+<img src="images/foto12.jpg" alt="Foto 12">
+<img src="images/foto13.jpg" alt="Foto 13">
+<img src="images/foto14.jpg" alt="Foto 14">
+<img src="images/foto15.jpg" alt="Foto 15">
+    </div>
 
-    <!-- Video Alanı -->
-    <section>
-      <h2>🎥 Videolarımız</h2>
-      <div class="video-alani">
-        <video controls width="320">
-          <source src="videos/video1.mp4" type="video/mp4">
-        </video>
-        <video controls width="320">
-          <source src="videos/video2.mp4" type="video/mp4">
-        </video>
-      </div>
-    </section>
-  </div>
+    <h2>Videolar</h2>
+    <div class="videos">
+        <video controls><source src="videos/video1.mp4" type="video/mp4"></video>
+        <video controls><source src="videos/video2.mp4" type="video/mp4"></video>
+    </div>
+</div>
 
-  <script src="script.js"></script>
+<script>
+    function checkPassword() {
+        const input = document.getElementById('password').value;
+        if (input === 'askim123') {
+            document.getElementById('gate-screen').classList.add('open');
+            setTimeout(() => {
+                document.getElementById('gate-screen').style.display = 'none';
+                document.getElementById('main-content').style.display = 'block';
+            }, 3000);
+        } else {
+            alert("Yanlış şifre!");
+        }
+    }
+</script>
+
 </body>
 </html>
