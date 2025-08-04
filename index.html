@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sıla ve Turan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="kontrolEt()">
+
+  <!-- Müzik -->
+  <audio autoplay loop>
+    <source src="music/sarki.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Giriş Şifre Ekranı -->
+  <div id="sifreEkrani">
+    <h2>🌸 Lütfen şifreyi gir:</h2>
+    <input type="password" id="sifre" placeholder="••••••">
+    <button onclick="sifreKontrol()">Giriş</button>
+  </div>
+
+  <!-- İçerik -->
+  <div id="icerik" style="display:none;">
+    <h1>Hoş geldin Aşkım 💖</h1>
+    <p>"Seninle geçen her an bir ömre bedel."</p>
+
+    <!-- Foto Galeri -->
+    <h2>📸 Fotoğraflarımız</h2>
+    <div class="galeri">
+      <img src="images/foto1.jpg" />
+      <img src="images/foto2.jpg" />
+    </div>
+
+    <!-- Videolar -->
+    <h2>🎥 Videolarımız</h2>
+    <video controls width="300">
+      <source src="videos/video1.mp4" type="video/mp4" />
+    </video>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
