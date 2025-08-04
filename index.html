@@ -8,35 +8,62 @@
 </head>
 <body onload="kontrolEt()">
 
-  <!-- Müzik -->
+  <!-- Arka planda müzik -->
   <audio autoplay loop>
     <source src="music/sarki.mp3" type="audio/mpeg" />
   </audio>
 
-  <!-- Giriş Şifre Ekranı -->
-  <div id="sifreEkrani">
-    <h2>🌸 Lütfen şifreyi gir:</h2>
-    <input type="password" id="sifre" placeholder="••••••">
-    <button onclick="sifreKontrol()">Giriş</button>
+  <!-- Kapı ve Şifre Giriş Paneli -->
+  <div id="kapilar">
+    <div class="kapi sol"></div>
+    <div class="kapi sag"></div>
+    <div id="sifrePaneli">
+      <h2>🌸 Lütfen şifreyi gir:</h2>
+      <input type="password" id="sifre" placeholder="••••••">
+      <button onclick="sifreKontrol()">Giriş</button>
+    </div>
   </div>
 
-  <!-- İçerik -->
+  <!-- Ana içerik -->
   <div id="icerik" style="display:none;">
-    <h1>Hoş geldin Aşkım 💖</h1>
-    <p>"Seninle geçen her an bir ömre bedel."</p>
+    <h1>💖 Sıla ve Turan'ın Anıları 💖</h1>
+    <p>"Birlikte geçirdiğimiz her an bir ömre bedel..."</p>
 
-    <!-- Foto Galeri -->
-    <h2>📸 Fotoğraflarımız</h2>
-    <div class="galeri">
-      <img src="images/foto1.jpg" />
-      <img src="images/foto2.jpg" />
-    </div>
+    <!-- Fotoğraf Galerisi -->
+    <section>
+      <h2>📸 Fotoğraflarımız</h2>
+      <div class="galeri">
+        <!-- 15 adet örnek foto -->
+        <img src="images/foto1.jpg" alt="Anı 1" />
+<img src="images/foto2.jpg" alt="Anı 2" />
+<img src="images/foto3.jpg" alt="Anı 3" />
+<img src="images/foto4.jpg" alt="Anı 4" />
+<img src="images/foto5.jpg" alt="Anı 5" />
+<img src="images/foto6.jpg" alt="Anı 6" />
+<img src="images/foto7.jpg" alt="Anı 7" />
+<img src="images/foto8.jpg" alt="Anı 8" />
+<img src="images/foto9.jpg" alt="Anı 9" />
+<img src="images/foto10.jpg" alt="Anı 10" />
+<img src="images/foto11.jpg" alt="Anı 11" />
+<img src="images/foto12.jpg" alt="Anı 12" />
+<img src="images/foto13.jpg" alt="Anı 13" />
+<img src="images/foto14.jpg" alt="Anı 14" />
+<img src="images/foto15.jpg" alt="Anı 15" />
+      </div>
+    </section>
 
-    <!-- Videolar -->
-    <h2>🎥 Videolarımız</h2>
-    <video controls width="300">
-      <source src="videos/video1.mp4" type="video/mp4" />
-    </video>
+    <!-- Video Alanı -->
+    <section>
+      <h2>🎥 Videolarımız</h2>
+      <div class="video-alani">
+        <video controls width="320">
+          <source src="videos/video1.mp4" type="video/mp4">
+        </video>
+        <video controls width="320">
+          <source src="videos/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+    </section>
   </div>
 
   <script src="script.js"></script>
