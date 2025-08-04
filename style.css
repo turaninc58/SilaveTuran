@@ -1,73 +1,83 @@
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
-  color: #333;
-  margin: 0;
-  padding: 0;
-  text-align: center;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fdf6f0;
+    text-align: center;
 }
 
-audio {
-  display: none;
+#gate-screen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 10;
 }
 
-#kapilar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  overflow: hidden;
+.gate {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #111;
+    transition: all 3s ease;
+    z-index: 11;
 }
 
-.kapi {
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background: #ffb6c1;
-  transition: transform 1s ease;
+.left-gate { left: 0; }
+.right-gate { right: 0; }
+
+#gate-screen.open .left-gate { transform: translateX(-100%); }
+#gate-screen.open .right-gate { transform: translateX(100%); }
+
+#password-container {
+    z-index: 12;
+    text-align: center;
 }
 
-.kapi.sol {
-  left: 0;
+#password {
+    padding: 10px;
+    font-size: 18px;
 }
 
-.kapi.sag {
-  right: 0;
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-#sifrePaneli {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: white;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+.music-box {
+    margin-top: 30px;
 }
 
-.galeri {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  padding: 20px;
+.music-text {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+    font-style: italic;
 }
 
-.galeri img {
-  width: 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #aaa;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px;
 }
 
-.video-alani {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
+.gallery img {
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.videos video {
+    width: 320px;
+    margin: 10px;
+    border-radius: 10px;
 }
